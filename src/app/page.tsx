@@ -44,9 +44,9 @@ const products: ProductItemType[] = [
 	},
 ];
 export default function Home() {
-  return (
-    <section className="sm:py-18 mx-auto flex w-full max-w-md flex-grow flex-col p-12 px-8 py-12 sm:px-6 lg:max-w-7xl">
-      <ProductList products={products} />
-  	</section>
-  );
+	return (
+		<section className="sm:py-18 mx-auto flex w-full max-w-md flex-grow flex-col p-12 px-8 py-12 sm:px-6 lg:max-w-7xl">
+			<ProductList products={products} />
+		</section>
+	);
 }
