@@ -50,6 +50,11 @@ export default function Home() {
 			<Link href="/test1" className="font-bold">
 				Test 1
 			</Link>
+			<div>
+				<Link href="/regulamin" className="font-bold">
+					Regulamin
+				</Link>
+			</div>
 			<ProductList products={products} />
 		</section>
 	);
