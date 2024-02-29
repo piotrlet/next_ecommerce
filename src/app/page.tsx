@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProductList } from "@/ui/organisms/ProductList";
 import type { ProductItemType } from "@/ui/types";
 
@@ -45,7 +46,10 @@ const products: ProductItemType[] = [
 ];
 export default function Home() {
 	return (
-		<section className="sm:py-18 mx-auto flex w-full max-w-md flex-grow flex-col p-12 px-8 py-12 sm:px-6 lg:max-w-7xl">
+		<section className="mx-auto max-w-md p-12 sm:px-6 lg:max-w-7xl">
+			<Link href="/test1" className="font-bold">
+				Test 1
+			</Link>
 			<ProductList products={products} />
 		</section>
 	);
