@@ -19,7 +19,14 @@ export default async function Page() {
 			))}
 			 </ul> */}
 			<div>
-				<Link href="/test2">Link to Test 2</Link>
+				<Link
+					href="/test2"
+					replace={false} // default is false; if true, it will replace the current entry in history
+					scroll={true} // default is true; to scroll to the top of a new route or to maintain the scroll position for backwards and forwards navigation
+					prefetch={true} // default is true; if true, it will prefetch the page when Link enters the user's viewport; for both static and dynamic routes
+				>
+					Link to Test 2
+				</Link>
 				<ProductCounter>
 					<TestServer />
 				</ProductCounter>
@@ -28,3 +35,12 @@ export default async function Page() {
 		</>
 	);
 }
+
+// In some scenarios you might want to use router by useRouter hook, i.e.:
+// * redirect to another page after async operation like API call
+// * redirect (route switch) when user is not authenticated
+// * back to page after successful login
+// import { useRouter } from "next/navigation"; IMPORTANT next/navigation - not next/router
+
+// useParams with dynamic routes - similar to params
+// useSearchParams with query params
