@@ -14,12 +14,14 @@ export const ActiveLink = ({
 }) => {
 	const pathname = usePathname();
 	const isActive = pathname === href;
+
 	return (
 		<Link
-			href={href}
+			href={href as unknown as string}
 			className={clsx(
 				`text-gray-400 hover:text-gray-700`,
-				isActive && `text-gray-900 underline`,
+
+				{ underline: isActive },
 			)}
 		>
 			{children}
